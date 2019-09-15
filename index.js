@@ -4,6 +4,8 @@ CalendarRecords = (function() {
     };
 })();
 
+CalendarRecords.helper = include("./helper.js");
+
 CalendarRecords.add_event = function(date, event) {
     var id = random(8).join("");
 
@@ -23,6 +25,10 @@ CalendarRecords.update_event = function(id, date, event) {
 
 CalendarRecords.remove_event = function(id) {
     controller.catalog().remove("collection", this.name, id);
+}
+
+CalendarRecords.reset_events = function(id) {
+    controller.catalog().remove("collection", this.name);
 }
 
 CalendarRecords.get_events = function(year, month) {
