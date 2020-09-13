@@ -4,8 +4,6 @@ CalendarRecords = (function() {
     };
 })();
 
-CalendarRecords.utils = require("calendar-utils.js");
-
 CalendarRecords.add_event = function(date, event) {
     var id = random(8).join("");
 
