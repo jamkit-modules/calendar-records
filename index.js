@@ -1,10 +1,10 @@
 CalendarRecords = (function() {
     return {
-        "name":"calendar"
+        name: "calendar"
     };
 })();
 
-CalendarRecords.helper = include("./helper.js");
+CalendarRecords.utils = require("calendar-utils.js");
 
 CalendarRecords.add_event = function(date, event) {
     var id = random(8).join("");
